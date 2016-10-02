@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="いもぺんぎんのポートフォリオサイト">
+    <title>いもぺんぎんのポートフォリオサイト</title>
+    <meta name="descriotion" content="web初心者初心者のいもぺんぎんがhtml5 CSS ruby を必死に勉強するポートフォリオサイト">
+    <!-- BootstrapのCSS読み込み -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jQuery読み込み -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+      /*全体のCSS*/
+      *{
+        font-family:Meiryo;
+      }
+      
+      /*.navbar領域のCSS*/
+      
+      
+     .nav_container ul{
+        margin-right:30px;
+      }
+
+     .nav_ul_container {
+       min-height:40px;
+      }
+
+      
+      /*.profile領域のCSS*/
+      #profile_container{
+       width:100%;
+       min-height:450px;
+       background-image:url(sozai/image_penguin.jpg);
+       background-size: cover;
+       background-repeat:no-repeat;
+      }
+      
+      .profile{
+       width:80%;
+       min-height:400px;
+       padding:5% 20% 5%;
+       color:#fff;
+       letter-spacing:0.5px;
+      }
+
+      .profile h2{
+        width:250px;
+        padding-top:6px;
+        margin-bottom:20px;
+        border:2px solid #fff;
+        text-align: center;
+      }
+      
+      .profile h2 span{
+        color:#DCF9FC; 
+        font-size:150%;
+        font-weight: bold;
+      }
+      
+      .profile p{
+        font-size:130%;
+      }
+      
+      .profile p span{
+        color:#DCF9FC; 
+        font-size:180%;
+      }
+      
+      /*CreateApps領域のCSS*/
+      
+      #createapps_container{
+        background-image:url(sozai/image_pc.JPG);
+        background-size:cover;
+        background-repeat:no-repeat;
+        color: #fff;
+        padding:5% 0;
+        width: 100%;
+        min-height: 600px;
+      }
+      
+      .createapps{
+        width:80%;
+        padding:0 0 0 18.5%;
+      }
+      
+       #createapps_container h2{
+        width:250px;
+        padding-top:4px;
+        margin-bottom:20px;
+        border:2px solid #fff;
+        text-align: center;
+      }
+      
+     #createapps_container h2 span{
+        color:#314D69; 
+        font-size:150%;
+        font-weight:bold;
+      }
+      
+
+      .glid_a{
+        width:100%;
+        height:400px;
+        background-color:rgba(49,67,102,0.7);
+        border-radius:10px 10px 10px 10px;
+        padding:2px 10px;
+        margin:10px 0;
+      }
+      
+      .glid_b{
+        width:100%;
+        height:400px;
+        background-color:rgba(79,141,180,0.7);
+        border-radius:10px 10px 10px 10px;
+        padding:2px 10px;
+        margin:10px 0;
+      }
+      
+    /*content領域のCSS  */
+    #content_container{
+        width:100%;
+        padding: 5% 0;  
+        min-height: 600px;
+        background-image:url(sozai/image_post.jpg);
+        background-position:0 30%;
+        background-size:135% auto;
+        background-repeat:no-repeat;
+        color: #fff;
+    }     
+    
+    .content{
+        width:58%;
+        margin: 0 20% 0 20%;
+      }
+    
+    #content_container h2{
+        width:250px;
+        padding-top:4px;
+        margin-bottom:20px;
+        border:2px solid #fff;
+        text-align: center;
+      }
+      
+     #content_container h2 span{
+        color:#408BCB; 
+        font-size:150%;
+        font-weight:bold;
+      }
+      
+      
+     .submit_container{
+      width:100px;
+      margin-left:auto;  
+      }
+
+     .footer_container{
+       background-color:#222222;
+       width:100%;
+       min-height:50px;
+     }
+     
+     .footer_container p{
+       text-align:center;
+       color:#FFF;
+       padding-top:15px;
+     }
+
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <div class="nav_container">
+      <!-- <nav class="navbar navbar-inverse navbar-fixed-top">-->
+  　   <!--  <div class="navbar-header">-->
+   　  <!--    <a href="#" class="navbar-brand" style="font-weight:bold;">南極のふとっちょ</a>-->
+      <!--    <button type="button" class="navbar-toggle" deta-toggle="collapse" date-target="#gnavi">-->
+      <!--      <span class="sr-only">メニュー</span>-->
+      <!--      <span class="icon-bar"></span>-->
+      <!--      <span class="icon-bar"></span>-->
+      <!--      <span class="icon-bar"></span>-->
+      <!--    </button>-->
+      <!--  </div>-->
+        
+      <!--  <div id="gnavi" class="collapse navbar-collapse">-->
+      <!--    <ul class="nav navbar-nav navbar-right">-->
+      <!--      <li><a href="index.html">Home</a></li>-->
+      <!--      <li><a href="#profile_container">Profile</a></li>-->
+      <!--      <li><a href="#createapps_container">CreateApps</a></li>-->
+      <!--      <li><a href="#content_container">Contact</a></li>-->
+      <!--    </ul>-->
+      <!--  </div>-->
+      <!--</nav>-->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand" style="font-weight:bold;">南極のふとっちょ</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+            <span class="sr-only">メニュー</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="gnavi" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#profile_container">Profile</a></li>
+            <li><a href="#createapps_container">CreateApps</a></li>
+            <li><a href="#content_container">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+    </header>
+    <section>
+      <div id="profile_container">
+      <div class="profile_box">
+      <div class="profile">
+        <h2><span>P</span>rofile</h2>
+          <p><span>作</span>ってる人　：　いもぺんぎん</p>
+          <p><span>で</span>きること　：　AfterEffects / Illustrator / Photoshop</p>
+          <p><span>勉</span>  強  中　：　HTML5 / CSS3 / Ruby / Git </p>
+          <p><span>趣</span>   味   　：　読書 / カメラ / インテリア </p>
+      </div>
+      </div>
+      </div>
+    </section>
+    <div id="createapps_container">
+    <div class="createapps">  
+    <div class="container-fluid">
+     <h2><span>C</span>reateApps</h2>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="glid_a">
+          <h3>App1title</h3>
+          <p>App1text</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="glid_b">
+          <h3>App1title</h3>
+          <p>App1text</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="glid_a">
+          <h3>App1title</h3>
+          <p>App1text</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="glid_b">
+          <h3>App1title</h3>
+          <p>App1text</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    
+    <div id="content_container">
+    <div class="content">  
+    <h2><span>C</span>ontact</h2>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">氏名</label>
+       <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="氏名を入力してください。">
+       </div>
+      </div>
+      <div class="form-group">
+        <label for="E-mail" class="col-sm-2 control-label">E-mail</label>
+       <div class="col-sm-10">
+        <input type="mail" class="form-control" placeholder="メールアドレスを入力してください。">
+       </div>
+      </div>
+      <div class="form-group">
+        <label for="text" class="col-sm-2 control-label">内容</label>
+       <div class="col-sm-10">
+        <textarea type="text" rows="4" cols="40" class="form-control" placeholder="内容をご記入ください。">
+        </textarea>
+       </div>
+      </div>
+    <div class="submit_container">  
+     <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="footer_container">
+        <p>Copyright © 2016 imopenguin All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
